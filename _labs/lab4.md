@@ -95,4 +95,4 @@ Celebrate 🎉! We just prevented a security vulnerability from entering our cod
 
 In the next lab, we are going to go hands-on with secret protection, and see how we can use push protection to stop secrets from being pushed to GitHub.
 
-➡️ Head to the next [lab](lab4.md).
+➡️ Head to the next [lab](lab5.md).

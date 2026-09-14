@@ -6,7 +6,9 @@ This lab covers parts of the following exam domains:
 
 - Domain 6: Describe GitHub Advanced Security best practices
 
-> [!NOTE] This lab is only available if you are using an organization as the owner of the repository.
+> [!NOTE] This lab is only available if you are using an organization as the
+> owner of the repository. See the [requirements](requirements.md) for plan
+> and permission limitations.
 
 ## Exercise 1: Navigating to Security Overview
 
@@ -51,4 +53,3 @@ If you want to learn more about the security overview or about what a particular
 Congrats, you have finished all of the main labs! 🎉 If you have time or are up for a challenge, try out the extra credit labs!
 
 ➡️ If you want, you can now head to the first [extra credit lab](lab7-ec.md).
-
