@@ -2,6 +2,14 @@
 
 With Dependency Review enabled and configured, we want to block vulnerable packages from entering the codebase. We can define a repository ruleset to enforce this as well!
 
+> [!IMPORTANT]
+> The committed dependency-review workflow is an opt-in example and is
+> workflow-dispatch only. Dependency Review requires the repository's dependency
+> graph and GitHub Advanced Security support; enable those features before
+> running **Actions** --> **Dependency review example** manually. Do not enable
+> this workflow as an automatic pull-request check when those features are
+> unavailable.
+
 ## Exercise 1: Add the Dependency Review Action
 
 First, let's add the dependency review action workflow.
