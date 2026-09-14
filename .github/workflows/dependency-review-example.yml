@@ -1,5 +1,5 @@
-# This is an opt-in example. Enable Dependency Review support for the
-# repository before running it manually.
+# This is an opt-in example. Enable the repository variable below only after
+# Dependency graph and the required security features are available.
 name: Dependency review example
 
 on:
@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   dependency-review:
+    if: vars.ENABLE_DEPENDENCY_REVIEW == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Dependency review
