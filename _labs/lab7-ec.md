@@ -2,6 +2,13 @@
 
 We set up Code Scanning with CodeQL using the default method. Now, let's try using the **[advanced setup](https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/configuring-advanced-setup-for-code-scanning)**!
 
+> [!IMPORTANT]
+> Use exactly one CodeQL setup at a time. This repository has managed default
+> setup enabled, so disable it in **Settings** --> **Code security** before
+> manually running the committed `.github/workflows/codeql-example.yml`
+> workflow. Re-enable default setup after the exercise if you are not keeping
+> the advanced workflow.
+
 ## Exercise
 
 Why might you want to use the advanced setup? Here are some reasons:
@@ -18,7 +25,7 @@ Why might you want to use the advanced setup? Here are some reasons:
 
 ### Assignment
 
-Your assignment here is to switch to the **[advanced setup](https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/configuring-advanced-setup-for-code-scanning)**. You can start under the **Settings** --> **Code Security** page.
+Your assignment here is to switch to the **[advanced setup](https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/configuring-advanced-setup-for-code-scanning)**. You can start under the **Settings** --> **Code Security** page, disable the managed default setup, and use **Actions** --> **CodeQL advanced setup example** --> **Run workflow**.
 
 Your goal is to have a CodeQL workflow committed that successfully scans your code. Pay attention to some of the configuration options for the CodeQL scanning action. Refer to the [documentation](https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/configuring-advanced-setup-for-code-scanning) for more details.
 

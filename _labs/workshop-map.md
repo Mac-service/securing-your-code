@@ -1,7 +1,7 @@
 # Workshop map
 
 This map turns the labs into a role-based workshop. Use a temporary repository
-and the deliberately fake fixtures in [`secrets.txt`](../secrets.txt); never use
+and the deliberately fake fixtures described in [Lab 5](lab5.md); never use
 production code, credentials, or personal data.
 
 ## Learning objectives
