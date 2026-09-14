@@ -1,4 +1,6 @@
-FROM node:20-buster as installer
+# Bookworm is supported; Buster and Debian 11 are end-of-life. The runtime
+# remains distroless to reduce the production attack surface.
+FROM node:20-bookworm as installer
 COPY . /juice-shop
 WORKDIR /juice-shop
 RUN npm i -g typescript ts-node
@@ -15,12 +17,13 @@ RUN rm data/chatbot/botDefaultTrainingData.json || true
 RUN rm ftp/legal.md || true
 RUN rm i18n/*.json || true
 
-ARG CYCLONEDX_NPM_VERSION=latest
+# Pin the SBOM tool so rebuilds do not silently change generated metadata.
+ARG CYCLONEDX_NPM_VERSION=6.0.1
 RUN npm install -g @cyclonedx/cyclonedx-npm@$CYCLONEDX_NPM_VERSION
 RUN npm run sbom
 
 # workaround for libxmljs startup error
-FROM node:20-buster as libxmljs-builder
+FROM node:20-bookworm as libxmljs-builder
 WORKDIR /juice-shop
 RUN apt-get update && apt-get install -y build-essential python3
 COPY --from=installer /juice-shop/node_modules ./node_modules
@@ -28,7 +31,7 @@ RUN rm -rf node_modules/libxmljs/build && \
   cd node_modules/libxmljs && \
   npm run build
 
-FROM gcr.io/distroless/nodejs20-debian11
+FROM gcr.io/distroless/nodejs20-debian12
 ARG BUILD_DATE
 ARG VCS_REF
 LABEL maintainer="Bjoern Kimminich <bjoern.kimminich@owasp.org>" \
