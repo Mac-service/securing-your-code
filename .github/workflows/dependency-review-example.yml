@@ -1,7 +1,9 @@
+# This is an opt-in example. Enable Dependency Review support for the
+# repository before running it manually.
 name: Dependency review example
 
 on:
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
