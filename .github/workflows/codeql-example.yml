@@ -1,11 +1,9 @@
-name: CodeQL example
+# This is an opt-in advanced setup example. The repository's managed default
+# setup must be disabled before running this workflow to avoid duplicate scans.
+name: CodeQL advanced setup example
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-  schedule:
-    - cron: "30 2 * * 1"
+  workflow_dispatch:
 
 permissions:
   contents: read
