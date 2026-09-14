@@ -1,0 +1,18 @@
+name: Dependency review example
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dependency review
+        uses: actions/dependency-review-action@a6993e2c61fd5dc440b409aa1d6904921c5e1894 # v4.3.5
+        with:
+          fail-on-severity: high
+          comment-summary-in-pr: on-failure

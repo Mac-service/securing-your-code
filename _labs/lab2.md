@@ -9,7 +9,7 @@ Now that we have all of the security feature enabled, let's review the security 
 
 <details>
 
-  ![alt text](image.png)
+  ![Dependabot alerts](images/lab-2-1-1.png)
 </details>
 
 3. You should see a number of Dependabot alerts with various severities. Click on one of the alerts to see more information about it.
