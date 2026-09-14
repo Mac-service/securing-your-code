@@ -15,6 +15,11 @@ When adding an Actions step, use a verified full SHA and least privilege:
 permissions:
   contents: read
   security-events: write
+
+steps:
+  - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+    with:
+      persist-credentials: false
 ```
 
 Grant `security-events: write` only to the job that uploads a security result;
